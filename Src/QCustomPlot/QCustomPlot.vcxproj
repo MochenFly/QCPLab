@@ -60,8 +60,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)Include\$(ProjectName)"
-copy "$(ProjectDir)QCustomPlot.h" "$(SolutionDir)Include\$(ProjectName)"</Command>
+      <Command>mkdir "$(SolutionDir)Bin"
+mkdir "$(SolutionDir)Lib"
+mkdir "$(SolutionDir)Include\$(ProjectName)"
+
+copy "$(ProjectDir)QCustomPlot.h" "$(SolutionDir)Include\$(ProjectName)"
+copy "$(OutDir)$(ProjectName).lib" "$(SolutionDir)Lib\$(ProjectName).lib"
+copy "$(OutDir)$(ProjectName).dll" "$(SolutionDir)Bin\$(ProjectName).dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
