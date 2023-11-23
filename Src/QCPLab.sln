@@ -5,6 +5,31 @@ VisualStudioVersion = 15.0.28307.1927
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QCustomPlot", "QCustomPlot\QCustomPlot.vcxproj", "{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plots", "Plots\Plots.vcxproj", "{B2831088-7A43-4A5C-9769-77DB2E11C4F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751} = {C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AxisTags", "AxisTags\AxisTags.vcxproj", "{750C6D99-CE9F-417B-B0F7-C176DEEC7921}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751} = {C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Interactions", "Interactions\Interactions.vcxproj", "{6460679F-F3E5-4C8F-9225-F6A0E677B144}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751} = {C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScrollbarAxisRangecontrol", "ScrollbarAxisRangecontrol\ScrollbarAxisRangecontrol.vcxproj", "{1E7C7BB1-839A-494E-9D4A-BA3C9EB6C713}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751} = {C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextDocumentIntegration", "TextDocumentIntegration\TextDocumentIntegration.vcxproj", "{DABE78E2-7F5A-4631-A56D-84AF64309BA5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751} = {C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +40,26 @@ Global
 		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}.Debug|x64.Build.0 = Debug|x64
 		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}.Release|x64.ActiveCfg = Release|x64
 		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}.Release|x64.Build.0 = Release|x64
+		{B2831088-7A43-4A5C-9769-77DB2E11C4F4}.Debug|x64.ActiveCfg = Debug|x64
+		{B2831088-7A43-4A5C-9769-77DB2E11C4F4}.Debug|x64.Build.0 = Debug|x64
+		{B2831088-7A43-4A5C-9769-77DB2E11C4F4}.Release|x64.ActiveCfg = Release|x64
+		{B2831088-7A43-4A5C-9769-77DB2E11C4F4}.Release|x64.Build.0 = Release|x64
+		{750C6D99-CE9F-417B-B0F7-C176DEEC7921}.Debug|x64.ActiveCfg = Debug|x64
+		{750C6D99-CE9F-417B-B0F7-C176DEEC7921}.Debug|x64.Build.0 = Debug|x64
+		{750C6D99-CE9F-417B-B0F7-C176DEEC7921}.Release|x64.ActiveCfg = Release|x64
+		{750C6D99-CE9F-417B-B0F7-C176DEEC7921}.Release|x64.Build.0 = Release|x64
+		{6460679F-F3E5-4C8F-9225-F6A0E677B144}.Debug|x64.ActiveCfg = Debug|x64
+		{6460679F-F3E5-4C8F-9225-F6A0E677B144}.Debug|x64.Build.0 = Debug|x64
+		{6460679F-F3E5-4C8F-9225-F6A0E677B144}.Release|x64.ActiveCfg = Release|x64
+		{6460679F-F3E5-4C8F-9225-F6A0E677B144}.Release|x64.Build.0 = Release|x64
+		{1E7C7BB1-839A-494E-9D4A-BA3C9EB6C713}.Debug|x64.ActiveCfg = Debug|x64
+		{1E7C7BB1-839A-494E-9D4A-BA3C9EB6C713}.Debug|x64.Build.0 = Debug|x64
+		{1E7C7BB1-839A-494E-9D4A-BA3C9EB6C713}.Release|x64.ActiveCfg = Release|x64
+		{1E7C7BB1-839A-494E-9D4A-BA3C9EB6C713}.Release|x64.Build.0 = Release|x64
+		{DABE78E2-7F5A-4631-A56D-84AF64309BA5}.Debug|x64.ActiveCfg = Debug|x64
+		{DABE78E2-7F5A-4631-A56D-84AF64309BA5}.Debug|x64.Build.0 = Debug|x64
+		{DABE78E2-7F5A-4631-A56D-84AF64309BA5}.Release|x64.ActiveCfg = Release|x64
+		{DABE78E2-7F5A-4631-A56D-84AF64309BA5}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
