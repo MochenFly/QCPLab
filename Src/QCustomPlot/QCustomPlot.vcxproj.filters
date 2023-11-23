@@ -3,4 +3,10 @@
   <ItemGroup>
     <ClInclude Include="QCustomPlot_Export.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="QCustomPlot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QCustomPlot.h" />
+  </ItemGroup>
 </Project>
