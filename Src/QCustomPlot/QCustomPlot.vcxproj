@@ -64,7 +64,8 @@
 mkdir "$(SolutionDir)Lib"
 mkdir "$(SolutionDir)Include\$(ProjectName)"
 
-copy "$(ProjectDir)QCustomPlot.h" "$(SolutionDir)Include\$(ProjectName)"
+copy "$(ProjectDir)QCustomPlot.h" "$(SolutionDir)Include\$(ProjectName)\QCustomPlot.h"
+copy "$(ProjectDir)QCustomPlot_Export.h" "$(SolutionDir)Include\$(ProjectName)\QCustomPlot_Export.h"
 copy "$(OutDir)$(ProjectName).lib" "$(SolutionDir)Lib\$(ProjectName).lib"
 copy "$(OutDir)$(ProjectName).dll" "$(SolutionDir)Bin\$(ProjectName).dll"</Command>
     </PostBuildEvent>
