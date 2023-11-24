@@ -134,6 +134,9 @@ class QCPPolarGraph;
 #define QCUSTOMPLOT_VERSION_STR "2.1.1"
 #define QCUSTOMPLOT_VERSION 0x020101
 
+// include export files by junwei 2023.11.23
+#include "QCustomPlot_Export.h"
+
 // decl definitions for shared library compilation/usage:
 #if defined(QT_STATIC_BUILD)
 #  define QCP_LIB_DECL
@@ -142,7 +145,9 @@ class QCPPolarGraph;
 #elif defined(QCUSTOMPLOT_USE_LIBRARY)
 #  define QCP_LIB_DECL Q_DECL_IMPORT
 #else
-#  define QCP_LIB_DECL
+// modified by junwei 2023.11.23
+//#  define QCP_LIB_DECL
+#  define QCP_LIB_DECL QCUSTOMPLOT_EXPORT
 #endif
 
 // define empty macro for Q_DECL_OVERRIDE if it doesn't exist (Qt < 5)
