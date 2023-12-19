@@ -30,6 +30,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextDocumentIntegration", "
 		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751} = {C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "API", "API\API.vcxproj", "{852EDC30-3488-4D24-BF88-1467F014748D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751} = {C4A9F4F1-EF5F-41A5-9B10-6C9C262C0751}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -60,6 +65,10 @@ Global
 		{DABE78E2-7F5A-4631-A56D-84AF64309BA5}.Debug|x64.Build.0 = Debug|x64
 		{DABE78E2-7F5A-4631-A56D-84AF64309BA5}.Release|x64.ActiveCfg = Release|x64
 		{DABE78E2-7F5A-4631-A56D-84AF64309BA5}.Release|x64.Build.0 = Release|x64
+		{852EDC30-3488-4D24-BF88-1467F014748D}.Debug|x64.ActiveCfg = Debug|x64
+		{852EDC30-3488-4D24-BF88-1467F014748D}.Debug|x64.Build.0 = Debug|x64
+		{852EDC30-3488-4D24-BF88-1467F014748D}.Release|x64.ActiveCfg = Release|x64
+		{852EDC30-3488-4D24-BF88-1467F014748D}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
