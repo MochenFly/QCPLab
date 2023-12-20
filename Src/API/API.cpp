@@ -21,8 +21,11 @@ void API::initializeUi()
 {
     ui->setupUi(this);
 
-    this->setStyleSheet("border: 1px solid red;");
     initializePlot();
+
+    drawSquareCurve();
+    drawPoint();
+    drawRing();
 }
 
 void API::initializePlot()
@@ -53,4 +56,55 @@ void API::initializePlot()
     // tssMeetTickCount：尽可能满足 setTickCount 设置的值，可读性不好
     //m_pPlot->xAxis->ticker()->setTickCount(6);
     //m_pPlot->xAxis->ticker()->setTickStepStrategy(QCPAxisTicker::tssMeetTickCount);
+}
+
+void API::drawSquareCurve()
+{
+    QVector<double> x(101), y(101);
+    for (int i = 0; i < 101; ++i)
+    {
+        x[i] = i / 50.0 - 1;
+        y[i] = x[i] * x[i];
+    }
+
+    m_pSquareCurve = m_pPlot->addGraph();
+    m_pSquareCurve->setData(x, y);
+
+    m_pPlot->xAxis->setLabel("x");
+    m_pPlot->yAxis->setLabel("y");
+
+    m_pPlot->xAxis->setRange(-1.1, 1.1);
+    m_pPlot->yAxis->setRange(0, 1.1);
+}
+
+void API::drawPoint()
+{
+    m_pPoint = m_pPlot->addGraph();
+    
+    QVector<double> xValue;
+    xValue << -1 << -0.5 << 0 << 0.5 << 1;
+    QVector<double> yValue;
+    yValue << 0.5 << 1 << 0.5 << 0 << 0.5;
+	m_pPoint->setData(xValue, yValue);
+
+    // 最后显示的大小是 pen 的宽度加上散点的尺寸
+    QPen pen(Qt::red, 2.0, Qt::DashLine);
+    m_pPoint->setPen(pen);
+    m_pPoint->setLineStyle(QCPGraph::lsImpulse);
+	m_pPoint->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssDisc, 6));
+}
+
+void API::drawRing()
+{
+    m_pRing = m_pPlot->addGraph();
+    QVector<double> xValue;
+    xValue << -1 << -0.5 << 0 << 0.5 << 1;
+    QVector<double> yValue;
+    yValue << 0.5 << 1 << 0.5 << 0 << 0.5;
+	m_pRing->setData(xValue, yValue);
+
+    QPen pen(Qt::green, 2.0, Qt::SolidLine);
+    m_pRing->setPen(pen);
+    m_pRing->setLineStyle(QCPGraph::lsNone);
+	m_pRing->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssCircle, 8));
 }
