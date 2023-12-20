@@ -22,7 +22,20 @@ private:
     void initializeUi();
     void initializePlot();
 
+    // 绘制平方曲线
+    void drawSquareCurve();
+
+    // 绘制点
+    void drawPoint();
+
+    // 绘制圆环
+    void drawRing();
+
 private:
     Ui::APIClass*               ui;
     QCustomPlot*                m_pPlot;
+    QCPGraph*                   m_pSquareCurve          { nullptr };
+    QCPGraph*                   m_pPoint                { nullptr };
+    QCPGraph*                   m_pRing                 { nullptr };
+
 };
